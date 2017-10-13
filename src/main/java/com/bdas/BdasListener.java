@@ -46,12 +46,12 @@ public class BdasListener implements InitializingBean, DisposableBean {
         //send email if created issue belongs to TEST project and has the highest priority 
         if (eventTypeId.equals(EventType.ISSUE_CREATED_ID) && issue.getKey().contains("TEST") && issue.getPriority().getId().equals("1"))
         {
-            sendEmail("abstractelement@mail.ru","Blocker Priority " + issue.getKey(), issue.getSummary());
+            sendEmail("test@mail.ru","Blocker Priority " + issue.getKey(), issue.getSummary());
             log.info("BDAS Listener: Mail from listener has been sent - " + issue.getKey());
         }
     }
 
-    public void sendEmail(String emailAdr, String subject, String body) {
+    private void sendEmail(String emailAdr, String subject, String body) {
         SMTPMailServer smtpMailServer = ComponentAccessor.getMailServerManager().getDefaultSMTPMailServer();
         if (smtpMailServer != null) {
             Email email = new Email(emailAdr);
