@@ -123,7 +123,7 @@
                     </pluginArtifacts>
                     -->
                     <enableQuickReload>true</enableQuickReload>
-                    <enableFastdev>true</enableFastdev>
+                    <enableFastdev>false</enableFastdev>
 
                     <!-- See here for an explanation of default instructions: -->
                     <!-- https://developer.atlassian.com/docs/advanced-topics/configuration-of-instructions-in-atlassian-plugins -->
